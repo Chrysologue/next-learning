@@ -1,45 +1,51 @@
 import Link from "next/link"
-import '@/app/globals.css'
-export default function Footer(){
+export default function Footer() {
 
-    return(
-        <footer className="bg-black text-white p-4 rounded-2xl text-center md:text-left md:rounded-none">
-            <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-8 p-10 ">
-                <div className="mb-10">
-                    <h2 className="flex gap-[5px] items-center mb-5 justify-center md:justify-start"><i className="bx bx-pyramid text-[30px] text-yellow-500" /><span className="text-xl">ATARAXIS</span></h2>
-                    <div >
-                        <p>Empowering physicians with advanced
-                            multi-modal tools to improve treatment
-                            selection and patient outcomes
-                        </p>
+    return (
+        <footer>
+            <div className="px-6 py-8 sm:px-12 sm:py-10 bg-linear-to-br from-slate-900 via-stone-900 to-green-950 text-white">
+                <div className="grid grid-cols-1 gap-10 md:grid-cols-[1fr_2fr] text-center md:text-left">
+                    <div>
+                        <Link href="/" className="flex items-center justify-center md:justify-start mb-8 gap-[3px]"><i className="bx bx-paper-plane text-3xl text-pink-500" /><span className="text-3xl uppercase text-shadow-lg text-shadow-cyan-400">iblog</span></Link>
+                        <p className="text-sm text-slate-100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem commodi maiores aperiam cumque quisquam voluptas, mollitia dolores sed nihil repellendus sapiente, amet veritatis quibusdam consequuntur.</p>
                     </div>
-                    <div className="mt-8">
-                        <span className="inline=block mr-[5px]"><i className="bx bxl-twitter"></i></span>
-                        <span className="inline=block mr-[5px]"><i className="bx bxl-linkedin"></i></span>
-                        <span className="inline=block mr-[5px]"><i className="bx bxl-instagram"></i></span>
-                        <span className="inline=block mr-[5px]"><i className="bx bxl-facebook"></i></span>
+                    <div className="grid gap-10 grid-cols-1 md:grid-cols-3 ">
+                        <div>
+                            <h2 className="mb-4 md:mb-8 text-xl md:text-2xl">Links</h2>
+                            <div className="flex flex-col gap-2">
+                                <Link href="/">Home</Link>
+                                <Link href="#">Get Started</Link>
+                                <Link href="#">Services</Link>
+                                <Link href="#">Portfolio</Link>
+                                <Link href="#">Corporate</Link>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 className="mb-4 md:mb-8 text-xl md:text-2xl">Others</h2>
+                            <div className="flex flex-col gap-2">
+                                <Link href="#">Terms of Services</Link>
+                                <Link href="#">Privacy</Link>
+                                <Link href="#">Faqs</Link>
+                                <Link href="#">Company</Link>
+                                <Link href="#">Agencies</Link>
+                            </div>
+                        </div>
+                        <div>
+                            <h2 className="mb-4 md:mb-8 text-xl md:text-2xl">Social</h2>
+                            <p className="mb-4">Follow us on Social Media</p>
+                            <div className="flex gap-2 justify-center md:justify-start">
+                                <Link href="#"><i className="bx bxl-facebook-square"></i> </Link>
+                                <Link href="#"><i className="bx bxl-instagram"></i> </Link>
+                                <Link href="#"><i className="bx bxl-twitter"></i> </Link>
+                                <Link href="#"><i className="bx bxl-youtube"></i> </Link>
+                                <Link href="#"><i className="bx bxl-linkedin"></i></Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className="mb-10">
-                    <span className="block mb-5 text-[17px] font-bold">Site Map</span>
-                    <div className="grid grid-cols-1 gap-3">
-                        <Link href="/">Homepage</Link>
-                        <Link href="#">Technology</Link>
-                        <Link href="#">Ataris Breast</Link>
-                        <Link href="#">Resources & news</Link>
-                        <Link href="#">Careers</Link>
-                        <Link href="#">Contact Us</Link>
-                        <Link href="#">Portal</Link>
-                    </div>
-                </div>
-                <div>
-                    <span className="block mb-5 text-[17px] font-bold"> Legal</span>
-                    <div className="grid grid-cols-1 gap-3">
-                        <Link href="#">Privacy Policy</Link>
-                        <Link href="#">Terms of Services</Link>
-                        <Link href="#">Lawyer's Corners</Link>
-                    </div>
-                </div>
+            </div>
+            <div className="bg-linear-to-l from-red-200 to-cyan-100 p-4 text-center">
+                <p className="text-mauve-950 text-sm md:text-base">&copy;2026 All right reserved</p>
             </div>
         </footer>
     )

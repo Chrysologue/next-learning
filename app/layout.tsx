@@ -1,17 +1,20 @@
-import { poppins } from "@/lib/font"
-import Footer from "./components/Footer"
+import '@/app/globals.css'
+import React from 'react';
+import { poppins } from '@/lib/font';
+import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-
-
   return (
-    <html lang="en-us">
+    <html lang='en-us'>
       <head>
-        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+        />
       </head>
       <body className={poppins.className}>
-
-
+        <Navbar />
         {children}
         <Footer />
       </body>
